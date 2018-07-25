@@ -1,0 +1,54 @@
+/*
+Document   : _mixins
+Created on : Sep 26, 2012, 11:40:18 PM
+Author     : trimmedon
+Description:
+Purpose of the stylesheet follows.
+*/
+$sprites-layout: smart;
+$sprites-spacing: 2px;
+@import "sprites/*.png";
+
+@mixin sprites($name){
+    height: sprites-sprite-height($name);
+    width: sprites-sprite-width($name);
+    @include sprites-sprite($name);
+}
+
+/* How to use no-padding mixin
+    @include no-padding("left");
+    @include no-padding("right");
+    @include no-padding("top");
+    @include no-padding("bottom");
+    @include no-padding("all");
+
+    .no-padding-left
+    .no-padding-right
+    .no-padding-bottom
+    .no-padding-top
+    .no-padding - to remove padding from all sides
+*/
+
+@mixin no-padding($side) {
+    @if $side == 'all' {
+        .no-padding {
+            padding: 0 !important;
+        }
+    } @else {
+        .no-padding-#{$side} {
+            padding-#{$side}: 0 !important;
+        }
+    }
+}
+
+@mixin no-margin($side) {
+    @if $side == 'all' {
+        .no-margin {
+            margin: 0 !important;
+        }
+    } @else {
+        .no-margin-#{$side} {
+            margin-#{$side}: 0 !important;
+        }
+    }
+}

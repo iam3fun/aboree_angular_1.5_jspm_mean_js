@@ -1,0 +1,157 @@
+.form-group {
+  margin-bottom: 25px;
+  .form-field {
+    .input,
+    .textarea {
+      &.form-control {
+        background-color: lighten($sixth-color, 10%);
+        border: 5px solid $main-color;
+        color: $main-color;
+        line-height: 1.2em;
+        font-size: 21px;
+        padding: 6px 10px;
+        font-family: content;
+        @include box-shadow(none);
+        @include border-radius(3px);
+        @include transition-property(all);
+        @include transition-duration(250ms);
+        @include transition-timing-function(linear);
+        @include input-placeholder {
+          color: darken($shift-color, 35%);
+        }
+        &:focus {
+          background-color: $shift-color;
+          border: 5px solid $fifth-color;
+          @include box-shadow(none);
+        }
+      }
+    }
+    label {
+      font-size: 18px;
+      color: $main-color;
+      padding: 0 5px;
+      line-height: 1.2em;
+      @include border-radius(3px);
+    }
+    .input {
+      height: auto;
+      &.ng-touched {
+        &.ng-invalid-required {
+          background-color: $fourth-color;
+          border: 5px solid $fifth-color;
+          color: $fifth-color;
+          &:focus {
+            color: $shift-color;
+            @include input-placeholder {
+              color: $shift-color;
+            }
+          }
+        }
+        &.ng-valid-required {
+          border: 5px solid $main-color;
+          color: $main-color;
+          &:focus {
+            border: 5px solid $fifth-color;
+          }
+        }
+      }
+    }
+    span {
+      float: right;
+      margin-top: 5px;
+      margin-botton: 0px;
+      color: $shift-color;
+      background-color: $fourth-color;
+      padding-right: 5px;
+      padding-left: 5px;
+      line-height: 1.2em;
+      font-family: main;
+      @include border-radius(3px);
+      @include inline-block;
+      &.error-text {
+        color: $shift-color;
+      }
+    }
+    .progress {
+      overflow: visible;
+      margin-bottom: 0;
+      .progress-bar {
+        @include box-shadow(none);
+        @include border-radius(3px);
+        @include background-image(none);
+        span {
+          margin-top: 3px;
+          margin-right: 3px;
+        }
+        &.progress-bar-danger {
+          span {
+            background-color: darken($progress-danger-color, 20%);
+          }
+        }
+        &.progress-bar-warning {
+          span {
+            background-color: darken($progress-warning-color, 20%);
+          }
+        }
+        &.progress-bar-info {
+          span {
+            background-color: darken($progress-info-color, 20%);
+          }
+        }
+        &.progress-bar-primary {
+          span {
+            background-color: darken($progress-primary-color, 20%);
+          }
+        }
+        &.progress-bar-success {
+          span {
+            background-color: darken($progress-success-color, 20%);
+          }
+        }
+      }
+    }
+  }
+}
+.button {
+  color: lighten($tenth-color, 15%);
+  font-size: 18px;
+  padding: 9px 18px;
+  font-family: content;
+  border: none;
+  background-color: $main-color;
+  background-image: none;
+  @include text-shadow(none);
+  @include box-shadow(none);
+  @include border-radius(3px);
+  @include user-select(none);
+  @include transition-property(all);
+  @include transition-duration(250ms);
+  @include transition-timing-function(linear);
+  &:focus,
+  &:hover {
+    color: $main-color;
+    background-color: $shift-color;
+    text-decoration: none;
+  }
+  &.enabled {
+    cursor: pointer;
+    color: $main-color;
+    background-color: $shift-color;
+    &:focus,
+    &:hover {
+      color: $shift-color;
+      background-color: $fifth-color;
+    }
+  }
+  &.disabled {
+    opacity: 1;
+    cursor: default;
+    color: transparent;
+    background-color: $main-color;
+    @include text-shadow(0 0 1px rgba($tenth-color, 0.7));
+    &:focus,
+    &:hover {
+      background-color: $main-color !important;
+    }
+  }
+}

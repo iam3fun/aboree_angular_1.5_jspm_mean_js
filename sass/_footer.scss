@@ -1,0 +1,83 @@
+/*
+Document   : footer
+Created on : Sep 26, 2012, 11:25:40 PM
+Author     : khrassi.zlateff@gmail.com
+Description:
+Purpose of the stylesheet follows.
+*/
+
+.footer {
+    background-color: $shift-color;
+    padding: 15px 0 20px;
+    font-size: 14px;
+    color: $main-color;
+    @include user-select(none);
+    @include clearfix;
+    a {
+        color: $main-color;
+        text-decoration: none;
+    }
+    .menu {
+        margin: 0;
+        @include clearfix;
+        li {
+            display: block;
+            float: left;
+            margin: 0 10px;
+            &.first-element {
+                margin-left: 0;
+            }
+            &.active {
+                a {
+                    color: $fifth-color;
+                }
+            }
+            a {
+                display: block;
+                @include transition(color .25s);
+                &:hover {
+                    color: $fourth-color;
+                }
+            }
+        }
+    }
+    .app-version {
+        float: right;
+        @include clearfix;
+        .site-name {
+            font-family: main;
+            float: left;
+            span {
+                float: left;
+                &.version-number {
+                    line-height: 1em;
+                    font-family: content;
+                    font-size: 9px;
+                    margin-top: 4px;
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+    .copyright-and-madein-wrapper {
+        font-size: 12px;
+        text-align: center;
+        margin: 40px 0 0;
+        @include clearfix;
+        .copyright {
+            line-height: 1em;
+            span {
+                margin: 0 5px;
+                font-size: 10px;
+            }
+        }
+        .made-in-sofia {
+            margin-top: 5px;
+            line-height: 1em;
+            .love {
+                margin: 0 2px;
+                color: $fourteenth-color;
+            }
+        }
+    }
+}

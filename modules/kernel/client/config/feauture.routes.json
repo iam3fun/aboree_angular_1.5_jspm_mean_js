@@ -1,0 +1,8 @@
+[
+  {
+    "stateName": "home",
+    "urlPrefix": "/",
+    "type": "load",
+    "src": "modules/kernel/client/home.client.module"
+  }
+]

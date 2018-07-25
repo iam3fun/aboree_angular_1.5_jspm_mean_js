@@ -1,0 +1,78 @@
+/*
+    Document   : index
+    Created on : Sep 18, 2014, 2:10:39 PM
+    Author     : Krasimir Zlatev (js3fun@gmail.com)
+    Description:
+    Purpose of the stylesheet follows.
+*/
+.index-page {
+  .front-containter {
+    .dots {
+      border-bottom: 5px solid $main-color;
+      .block-wrapper {
+        text-align: center;
+        display: block;
+        margin-top: 8%;
+        font-family: main;
+        .block-page {
+          margin-bottom: 50px;
+          color: $shift-color;
+          .first-title {
+            font-size: 75px;
+            display: block;
+            margin-bottom: 30px;
+            span {
+              color: $main-color;
+            }
+          }
+          .second-title {
+            font-size: 40px;
+            font-family: alter;
+            letter-spacing: -3px;
+            margin-left: 13px;
+          }
+        }
+        .login-wrapper {
+          background-color: rgba(darken($main-color, 15%), 0.4);
+          padding: 45px;
+          font-family: content;
+          @include border-radius(5px);
+          @include inline-block;
+          .login-form {
+            @include clearfix;
+            .form-group {
+              margin-bottom: 0;
+              .form-field {
+                float: left;
+                margin-right: 20px;
+                .input {
+                  display: block;
+                }
+              }
+              .button {
+                font-size: 21px;
+                padding: 15px 45px;
+                text-transform: capitalize;
+                color: transparent;
+                @include text-shadow(0 0 1px rgba($tenth-color, 0.7));
+                &.enabled {
+                  color: $main-color;
+                  &:focus,
+                  &:hover {
+                    color: $shift-color;
+                    background-color: $fifth-color;
+                  }
+                }
+              }
+            }
+          }
+          .forgot-password {
+            margin-top: 5px;
+            margin-right: 160px;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}

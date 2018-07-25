@@ -1,0 +1,66 @@
+/*
+    Document   : signup-page
+    Created on : May 29, 2016, 2:10:39 PM
+    Author     : Krasimir Zlatev (js3fun@gmail.com)
+    Description:
+    Purpose of the stylesheet follows.
+*/
+.signup-page {
+  .front-containter {
+    .dots {
+      background: none;
+      .block-wrapper {
+        form {
+          .account-name {
+            @include clearfix;
+            .form-field {
+              float: left;
+              margin-left: 15px;
+              .input {
+                width: 221px;
+              }
+              &:first-child {
+                margin-left: 0;
+              }
+            }
+          }
+          .password-requirements-submit {
+            @include clearfix;
+            .form-field {
+              float: left;
+              &:first-child {
+                margin-right: 30px;
+              }
+              label {
+                color: $shift-color;
+              }
+              &:last-child {
+                width: 317px;
+                font-family: content;
+                label {
+                  padding-right: 0;
+                  margin-bottom: 1px;
+                }
+              }
+            }
+          }
+        }
+        .block-page {
+          .social-platforms {
+            margin-top: 35px;
+            @include clearfix;
+            li {
+              font-size: 21px;
+              float: right;
+              margin-right: 15px;
+              color: $shift-color;
+              &:first-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

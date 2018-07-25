@@ -1,0 +1,85 @@
+/* ========================================================
+
+    Created on : Sep 3, 2014, 12:52:46 PM
+    Author     : Krasimir Zlatev (js3fun@gmail.com)
+
+======================================================== */
+
+body {
+    font-family: content;
+    font-size: 14px;
+    color: $main-color;
+    line-height: 1.2em;
+    h1, h2 , h3, h4, h5, h6 {
+        line-height: 1em;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    h1 {
+        font-size: 25px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    h2 {
+        color: lighten($main-color, 15%);
+        font-size: 22px;
+    }
+    h3, h4 {
+        color: lighten($main-color, 20%);
+        font-size: 18px;
+    }
+    h5, h6 {
+        color: lighten($main-color, 35%);
+        font-size: 15px;
+    }
+    ol, ul, p {
+        margin: 10px 0;
+    }
+    ol {
+        li {
+            margin: 5px 0;
+            list-style: decimal inside none;
+        }
+    }
+    ul {
+        li {
+            margin: 5px 0;
+            list-style: none inside none;
+        }
+    }
+    hr {
+        background-color: lighten($main-color, 60%);
+        height: 1px;
+        border: none;
+        margin: 10px 0;
+    }
+    a {
+        color: $alternative-color;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: $fifth-color;
+        }
+    }
+    select {
+        font-family: main;
+        font-size: 16px;
+        border: 1px solid rgba(2, 16, 5, 1);
+        line-height: 1em;
+        font-size: 16px;
+        padding: 10px;
+        width: 200px;
+        color: #111111;
+        display: block;
+        margin-right: 10px;
+        float: left;
+        @include box-shadow(#ccc 0 0 3px 1px inset);
+        &:focus {
+            @include box-shadow(#aaa 0 0 3px 1px inset);
+        }
+        option {
+            font-family: content;
+            font-size: 16px;
+        }
+    }
+}

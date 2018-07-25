@@ -1,0 +1,49 @@
+/* ========================================================
+
+    Created on : Sep 2, 2014, 11:21:21 AM
+    Author     : Krasimir Zlatev (krasimir.zlateff@gmail.com)
+
+======================================================== */
+
+@mixin main-font {
+   @include font-face("main",
+        font-files("nexa/bold/Nexa_Bold.eot",
+                   "nexa/bold/Nexa_Bold.svg",
+                   "nexa/bold/Nexa_Bold.ttf",
+                   "nexa/bold/Nexa_Bold.woff",
+                   "nexa/bold/Nexa_Bold.woff2"));
+}
+
+@mixin alter-font {
+   @include font-face("alter",
+        font-files("candara/regular/Candara.eot",
+                   "candara/regular/Candara.svg",
+                   "candara/regular/Candara.ttf",
+                   "candara/regular/Candara.woff",
+                   "candara/regular/Candara.woff2"));
+}
+
+@mixin content-font {
+   @include font-face("content",
+        font-files("proximanova/proximanova-regular-webfont.eot",
+                   "proximanova/proximanova-regular-webfont.ttf",
+                   "proximanova/proximanova-regular-webfont.woff",
+                   "proximanova/proximanova-regular-webfont.svg"));
+}
+
+@mixin icons-font {
+   @include font-face("foundation",
+        font-files("foundation-icons/foundation-icons.eot",
+                   "foundation-icons/foundation-icons.ttf",
+                   "foundation-icons/foundation-icons.woff",
+                   "foundation-icons/foundation-icons.svg"));
+}
+
+@mixin fontawesome-font {
+   @include font-face("fontAwesome",
+        font-files("fontawesome/fontawesome-webfont.eot",
+                   "fontawesome/fontawesome-webfont.ttf",
+                   "fontawesome/fontawesome-webfont.woff",
+                   "fontawesome/fontawesome-webfont.woff2",
+                   "fontawesome/fontawesome-webfont.svg"));
+}

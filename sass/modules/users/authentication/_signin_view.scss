@@ -1,0 +1,30 @@
+/*
+    Document   : signup-page
+    Created on : May 29, 2016, 2:10:39 PM
+    Author     : Krasimir Zlatev (js3fun@gmail.com)
+    Description:
+    Purpose of the stylesheet follows.
+*/
+.signin-page {
+  .front-containter {
+    .dots {
+      background: none;
+      .block-wrapper {
+        form {
+          .login-form-bottom {
+            @include clearfix;
+            .form-field {
+              float: left;
+              &:first-child {
+                margin-right: 30px;
+              }
+              .forgot-password {
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

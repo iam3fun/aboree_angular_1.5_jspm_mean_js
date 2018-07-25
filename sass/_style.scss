@@ -1,0 +1,83 @@
+/*
+    Document   : style
+    Created on : Sep 26, 2012, 11:23:23 PM
+    Author     : trimmedon
+    Description:
+    Purpose of the stylesheet follows.
+*/
+body {
+  background-color: $shift-color;
+  * {
+    @include selection($main-color, #fff);
+  }
+  height: 100%;
+  a {
+    @include transition-property(all);
+    @include transition-duration(250ms);
+    @include transition-timing-function(linear);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .we-use-cookies {
+    background-color: lighten(#000, 30%);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    @include clearfix;
+    .cookie-notice {
+      display: block;
+      @include inline-block;
+      p {
+        margin: 0;
+        a {
+          color: $main-color;
+        }
+      }
+    }
+    .close-notice {
+      float: right;
+      span {
+        cursor: pointer;
+      }
+    }
+    &.hide {
+      display: none;
+    }
+  }
+  .front-containter {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include clearfix;
+    .image-wrapper {
+      .main-image {
+        width: 100%;
+      }
+    }
+    .dots {
+      top: 0;
+      right: 0;
+      left: 0;
+      position: absolute;
+      background: url('../images/dots.png') repeat;
+      height: 100%;
+      .block-wrapper {
+        @include clearfix;
+      }
+    }
+  }
+  .forgot-password {
+    font-size: 18px;
+    font-family: content;
+    color: $shift-color;
+    display: block;
+    padding: 4px 8px;
+    @include border-radius(3px);
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      color: $fifth-color;
+    }
+  }
+}

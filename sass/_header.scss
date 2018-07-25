@@ -1,0 +1,33 @@
+/* ========================================================
+
+    Created on : Sep 3, 2014, 1:32:51 PM
+    Author     : Krasimir Zlatev (js3fun@gmail.com)
+
+======================================================== */
+
+.header {
+    padding: 12px 0;
+    @include clearfix;
+    .logo {
+        float: left;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 28px;
+        font-family: main;
+        line-height: 1em;
+        text-indent: -100000px;
+        @include inline-block;
+        @include sprites('logo');
+    }
+    .open-account {
+        float: right;
+        font-weight: bold;
+        background-color: $fourteenth-color;
+        text-transform: uppercase;
+        &:hover,
+        &:focus {
+            color: $main-color;
+            background-color: $shift-color;
+        }
+    }
+}

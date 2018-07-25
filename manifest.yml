@@ -1,0 +1,13 @@
+---
+declared-services:
+  mean-mongo:
+    label: mongodb
+    plan: 100
+applications:
+- name: aboreeNetwork
+  host: aboreeNetwork-${random-word}
+  memory: 128M
+  services:
+  - aboreeNetwork-mongo
+  env:
+    NODE_ENV: cloud-foundry
